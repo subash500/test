@@ -1,0 +1,111 @@
+@mixin textNameHead {
+  font-size: 3rem;
+  font-weight: 700;
+}
+@mixin textPg {
+  font-size: 1rem;
+  font-weight: 400;
+  font-family: HK Grotesk-light;
+}
+.headerNav {
+  height: 95vh;
+  background-color: $color-primary-image;
+  background-size: cover;
+  background-position: top;
+  position: relative;
+  padding: 0px 190px;
+  clip-path: polygon(0 0, 100% 0, 100% 80%, 90% 100%, 0 80%);
+  .navbar {
+    background: transparent;
+    padding: 20px;
+  }
+  &--logo {
+    color: #fff;
+    font-size: 16px;
+    text-transform: uppercase;
+    font-weight: 500;
+    padding-right: 2rem;
+  }
+  &--innerText {
+    padding: 2rem;
+  }
+  & .right-textSec {
+    & img {
+      display: block;
+      margin-left: auto;
+      animation: imgRight 1s;
+    }
+  }
+  & .left-textSec {
+    & h6 {
+      @include textNameHead;
+      color: #fff;
+      animation-name: textAni;
+      animation-duration: 1s;
+      animation-timing-function: ease-out;
+    }
+    & hr {
+      width: 8%;
+      height: 7px;
+      background: $leftText-border;
+      animation: textAni 1s ease-out;
+    }
+    & p {
+      @include textPg;
+      color: #fff;
+      animation: textAni 1s ease-out;
+    }
+    & button {
+      background: $btn-border-primary;
+      border-radius: 2px;
+      font-size: $textFontLight;
+      padding: 12px 18px;
+      animation: btnBottom 1s;
+    }
+  }
+}
+
+.navListBrand {
+  padding-top: 8px;
+
+  ul {
+    li {
+      padding: 0px 13px;
+      a {
+        color: #fff;
+        padding-right: 0px !important;
+        padding-left: 0px !important;
+        &:link,
+        &:visited {
+          position: relative;
+          font-size: 15px;
+        }
+        &:hover,
+        &:active,
+        &:focus {
+          color: #fff;
+        }
+      }
+      & .navListBrand--btnPrimary {
+        background-color: $btn-primary;
+        font-size: 16px;
+        margin-top: -6px;
+        border: 1px solid #2b83ea;
+        box-sizing: border-box;
+        border-radius: 2px;
+      }
+      & .navListBrand--btnSecondary {
+        background-color: $btn-secondary-light;
+        font-size: 16px;
+        margin-top: -6px;
+        box-sizing: border-box;
+        border-radius: 2px;
+        color: $btn-sec-text-light;
+        & .textRightIcon {
+          float: right;
+          padding-left: 8px;
+        }
+      }
+    }
+  }
+}

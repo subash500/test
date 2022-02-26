@@ -1,0 +1,78 @@
+@mixin cardSecColor {
+  position: absolute;
+
+  padding: 4px;
+  width: 100%;
+  top: 0px;
+  text-align: center;
+  color: #fff;
+  font-size: 14px;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+}
+
+* {
+  margin: 0px;
+  padding: 0px;
+}
+@font-face {
+  font-family: HK Grotesk;
+  src: url("./fontawesome/webfonts/HKGrotesk-Regular.otf");
+}
+@font-face {
+  font-family: HK Grotesk-light;
+  src: url("./fontawesome/webfonts/HKGrotesk-Light.otf");
+}
+body {
+  font-family: HK Grotesk;
+  font-size: 16px;
+  font-weight: 400;
+  position: relative;
+}
+.md-row {
+  margin-right: 4px;
+  margin-left: 4px;
+}
+.md-col {
+  padding-right: 3px;
+  padding-left: 3px;
+}
+.cardBorderDark {
+  border: 2px solid #000;
+  & span {
+    @include cardSecColor;
+    background: #de742d;
+  }
+  & h2 {
+    padding-top: 39px;
+  }
+}
+.cardBorderLight {
+  & span {
+    @include cardSecColor;
+    background: #a07edc;
+  }
+  & h2 {
+    padding-top: 39px;
+  }
+}
+
+.QuantText input {
+  width: 40px;
+  text-align: center;
+  border: 0px;
+  font-size: 20px;
+}
+.decSpan {
+  background-color: #edf1f2;
+  color: #8ca4ab;
+  font-size: 28px;
+  border-radius: 4px;
+  padding: 10px 20px;
+}
+.btnAddbag {
+  width: 100%;
+  margin: 20px 0px;
+  padding: 15px;
+  background-color: $colorGreenLight;
+}

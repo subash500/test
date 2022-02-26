@@ -1,0 +1,129 @@
+.simple-gallery {
+  display: block;
+  margin: auto;
+
+  & .mini-image-Sec img {
+    width: 50px;
+    height: 50px;
+    float: left;
+    margin: 12px 4px 0px 0px;
+    cursor: pointer;
+    &:nth-of-type(4) {
+      margin-right: 0px;
+    }
+  }
+
+  &.maxi-image-Sec {
+    width: 407px;
+    height: 400px;
+    display: block;
+  }
+}
+
+.mainSection {
+  padding: 0px 190px;
+  position: relative;
+  margin-bottom: 4rem;
+}
+
+.section-Right {
+  h6 {
+    @include textNameHead;
+    padding-top: 4rem;
+  }
+  p {
+    @include textPg;
+    color: $colortextPg;
+  }
+}
+.textSpan {
+  padding-top: 10px;
+  padding-left: 10px;
+  font-size: 16px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.cardSectionHead {
+  border-radius: 6px;
+  position: relative;
+  min-height: 80px;
+  h2 {
+    font-size: 14px;
+    text-align: center;
+  }
+}
+.labelCheckBox {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 18px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  color: #202324;
+  margin-bottom: 30px;
+  /* Hide the browser's default radio button */
+  & input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+  }
+
+  & h2 {
+    font-size: 14px;
+    color: #202324;
+    & span {
+      background: #b1fbe3;
+      border-radius: 100px;
+      color: #202020;
+      padding: 4px 10px;
+      font-size: 12px;
+      font-style: italic;
+      font-weight: 600;
+    }
+  }
+  /* On mouse-over, add a grey background color */
+  &:hover input ~ .checkmark {
+    background-color: #ccc;
+  }
+  /* When the radio button is checked, add a blue background */
+  & input:checked ~ .checkmark {
+    background-color: #ffffff;
+    border: 2px solid $colorGreenLight;
+  }
+  /* Show the indicator (dot/circle) when checked */
+  & input:checked ~ .checkmark:after {
+    display: block;
+  }
+
+  /* Style the indicator (dot/circle) */
+  & .checkmark:after {
+    top: 5px;
+    left: 5px;
+    width: 11px;
+    height: 11px;
+    border-radius: 50%;
+    background: $colorGreenLight;
+  }
+}
+
+/* Create a custom radio button */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #eee;
+  border-radius: 50%;
+}
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
