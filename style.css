@@ -1,0 +1,381 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+@font-face {
+  font-family: HK Grotesk;
+  src: url("./fontawesome/webfonts/HKGrotesk-Regular.otf");
+}
+
+@font-face {
+  font-family: HK Grotesk-light;
+  src: url("./fontawesome/webfonts/HKGrotesk-Light.otf");
+}
+
+body {
+  font-family: HK Grotesk;
+  font-size: 16px;
+  font-weight: 400;
+  position: relative;
+}
+
+.md-row {
+  margin-right: 4px;
+  margin-left: 4px;
+}
+
+.md-col {
+  padding-right: 3px;
+  padding-left: 3px;
+}
+
+.cardBorderDark {
+  border: 2px solid #000;
+}
+.cardBorderDark span {
+  position: absolute;
+  padding: 4px;
+  width: 100%;
+  top: 0px;
+  text-align: center;
+  color: #fff;
+  font-size: 14px;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+  background: #de742d;
+}
+.cardBorderDark h2 {
+  padding-top: 39px;
+}
+
+.cardBorderLight span {
+  position: absolute;
+  padding: 4px;
+  width: 100%;
+  top: 0px;
+  text-align: center;
+  color: #fff;
+  font-size: 14px;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+  background: #a07edc;
+}
+
+.cardBorderLight h2 {
+  padding-top: 39px;
+}
+
+.QuantText input {
+  width: 40px;
+  text-align: center;
+  border: 0px;
+  font-size: 20px;
+}
+
+.decSpan {
+  background-color: #edf1f2;
+  color: #8ca4ab;
+  font-size: 28px;
+  border-radius: 4px;
+  padding: 10px 20px;
+}
+
+.headerNav {
+  height: 95vh;
+  background-color: #03062f;
+  background-size: cover;
+  background-position: top;
+  position: relative;
+  padding: 0px 190px;
+  clip-path: polygon(0 0, 100% 0, 100% 80%, 90% 100%, 0 80%);
+}
+.headerNav .navbar {
+  background: transparent;
+  padding: 20px;
+}
+.headerNav--logo {
+  color: #fff;
+  font-size: 16px;
+  text-transform: uppercase;
+  font-weight: 500;
+  padding-right: 2rem;
+}
+.headerNav--innerText {
+  padding: 2rem;
+}
+.headerNav .right-textSec img {
+  display: block;
+  margin-left: auto;
+  animation: imgRight 1s;
+}
+.headerNav .left-textSec h6 {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #fff;
+  animation-name: textAni;
+  animation-duration: 1s;
+  animation-timing-function: ease-out;
+}
+.headerNav .left-textSec hr {
+  width: 8%;
+  height: 7px;
+  background: #58c19c;
+  animation: textAni 1s ease-out;
+}
+.headerNav .left-textSec p {
+  font-size: 1rem;
+  font-weight: 400;
+  font-family: HK Grotesk-light;
+  color: #fff;
+  animation: textAni 1s ease-out;
+}
+.headerNav .left-textSec button {
+  background: #2b83ea;
+  border-radius: 2px;
+  font-size: 14px;
+  padding: 12px 18px;
+  animation: btnBottom 1s;
+}
+
+.navListBrand {
+  padding-top: 8px;
+}
+.navListBrand ul li {
+  padding: 0px 13px;
+}
+.navListBrand ul li a {
+  color: #fff;
+  padding-right: 0px !important;
+  padding-left: 0px !important;
+}
+.navListBrand ul li a:link,
+.navListBrand ul li a:visited {
+  position: relative;
+  font-size: 15px;
+}
+.navListBrand ul li a:hover,
+.navListBrand ul li a:active,
+.navListBrand ul li a:focus {
+  color: #fff;
+}
+.navListBrand ul li .navListBrand--btnPrimary {
+  background-color: #030f3f;
+  font-size: 16px;
+  margin-top: -6px;
+  border: 1px solid #2b83ea;
+  box-sizing: border-box;
+  border-radius: 2px;
+}
+.navListBrand ul li .navListBrand--btnSecondary {
+  background-color: #fff;
+  font-size: 16px;
+  margin-top: -6px;
+  box-sizing: border-box;
+  border-radius: 2px;
+  color: #528ff0;
+}
+.navListBrand ul li .navListBrand--btnSecondary .textRightIcon {
+  float: right;
+  padding-left: 8px;
+}
+
+@keyframes textAni {
+  0% {
+    opacity: 0;
+    transform: translateX(-10rem);
+  }
+  80% {
+    transform: translateX(2rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+
+@keyframes btnBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(200px);
+  }
+  80% {
+    transform: translateY(-10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+
+@keyframes imgRight {
+  0% {
+    opacity: 0;
+    transform: translateX(200px);
+  }
+  80% {
+    transform: translateX(-50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+
+.simple-gallery {
+  display: block;
+  margin: auto;
+}
+.simple-gallery .mini-image-Sec img {
+  width: 50px;
+  height: 50px;
+  float: left;
+  margin: 12px 4px 0px 0px;
+  cursor: pointer;
+}
+.simple-gallery .mini-image-Sec img:nth-of-type(4) {
+  margin-right: 0px;
+}
+.simple-gallery.maxi-image-Sec {
+  width: 407px;
+  height: 400px;
+  display: block;
+}
+
+.mainSection {
+  padding: 0px 190px;
+  position: relative;
+  margin-bottom: 4rem;
+}
+
+.section-Right h6 {
+  font-size: 3rem;
+  font-weight: 700;
+  padding-top: 4rem;
+}
+
+.section-Right p {
+  font-size: 1rem;
+  font-weight: 400;
+  font-family: HK Grotesk-light;
+  color: #4f5659;
+}
+
+.textSpan {
+  padding-top: 10px;
+  padding-left: 10px;
+  font-size: 16px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.cardSectionHead {
+  border-radius: 6px;
+  position: relative;
+  min-height: 80px;
+}
+.cardSectionHead h2 {
+  font-size: 14px;
+  text-align: center;
+}
+
+.labelCheckBox {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 18px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  color: #202324;
+  margin-bottom: 30px !important;
+}
+.labelCheckBox input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+.labelCheckBox h2 {
+  font-size: 14px;
+  color: #202324;
+}
+.labelCheckBox h2 span {
+  background: #b1fbe3;
+  border-radius: 100px;
+  color: #202020;
+  padding: 4px 10px;
+  font-size: 12px;
+  font-style: italic;
+  font-weight: 600;
+}
+.labelCheckBox:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+.labelCheckBox input:checked ~ .checkmark {
+  background-color: #ffffff;
+  border: 2px solid #00ba74;
+}
+.labelCheckBox input:checked ~ .checkmark:after {
+  display: block;
+}
+.labelCheckBox .checkmark:after {
+  top: 5px;
+  left: 5px;
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  background: #00ba74;
+}
+
+/* Create a custom radio button */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #eee;
+  border-radius: 50%;
+}
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+.btnAddbag {
+  width: 100%;
+  margin: 20px 0px;
+  padding: 15px;
+  background-color: #00ba74;
+  border: 1px solid #00ba74;
+}
+.btnAddbag:hover {
+  width: 100%;
+  margin: 20px 0px;
+  padding: 15px;
+  background-color: #00ba74;
+  border: 1px solid #00ba74;
+}
+@media screen and (max-width: 1151px) {
+  .headerNav .left-textSec h6 {
+    font-size: 2rem;
+  }
+}
+@media screen and (max-width: 740px) {
+  .headerNav {
+    height: 100%;
+  }
+  .right-textSec img {
+    width: 200px;
+  }
+}
